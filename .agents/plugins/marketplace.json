@@ -1,7 +1,7 @@
 {
-  "name": "personal",
+  "name": "personal-web",
   "interface": {
-    "displayName": "Personal"
+    "displayName": "Personal Web"
   },
   "plugins": [
     {
