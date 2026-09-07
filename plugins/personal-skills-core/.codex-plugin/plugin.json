@@ -1,0 +1,18 @@
+{
+  "name": "personal-skills-core",
+  "version": "0.1.0",
+  "description": "Portable personal workflows for ChatGPT Web and Codex, with no local filesystem or executable dependency.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Personal Skills Core",
+    "shortDescription": "Portable workflows for ChatGPT Web and Codex.",
+    "longDescription": "Provides 12 reviewed planning, analysis, design, performance, security, and handoff workflows. It works only from conversation context, user-provided files, and enabled connected apps; it never assumes access to a local filesystem, shell, or executable.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Select the most specific Personal Skills Core workflow for this request. Work only from conversation context, user-provided files, and enabled connected apps; clearly state when required evidence is unavailable."
+  }
+}
