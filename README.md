@@ -29,10 +29,18 @@ Those workflows need a separately designed remote MCP app before they can be mad
 
 `_excluded-local-first/` is local staging material only and is ignored by Git. It is retained to document the first portability cut, but is not part of the publishable plugin.
 
-## Publish to ChatGPT Web
+## Distribute through a GitHub marketplace
 
 1. Create a private GitHub repository from this directory and push it.
 2. In an eligible ChatGPT workspace, have an administrator import the repository as a plugin marketplace from **Workspace settings > Plugins > Marketplaces**.
 3. Install `Personal Skills Core` from the marketplace and test it in a new web chat.
+
+This is the appropriate distribution route for a workspace-managed plugin catalog and for Codex. In Codex, add the marketplace with both `.agents/plugins` and `plugins` included in any sparse checkout.
+
+## Install on an individual ChatGPT Web account
+
+The ChatGPT Web Skills interface accepts individual `.skill`, `.zip`, or `SKILL.md` uploads; it does not expose a personal GitHub marketplace-import control on every account type. Upload each folder under `plugins/personal-skills-core/skills/` as its own `.skill` archive through **Skills > Create > Upload from computer**. ChatGPT scans each uploaded skill before it is installed.
+
+`skill-upload-bundles/` is a local, ignored build output for this upload path. It is not part of the GitHub marketplace source.
 
 Do not add an `.mcp.json` file to this plugin merely to reach local tools: that can make a plugin desktop-only. Add a remote MCP app only after defining authentication, data boundaries, allowed actions, and an approval model.
