@@ -1,6 +1,6 @@
 {
   "name": "personal-skills-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Portable workflows for ChatGPT and Codex that use conversation context, user-provided files, and enabled connected apps.",
   "author": {
     "name": "WizerdBaChe",
@@ -8,6 +8,7 @@
   },
   "homepage": "https://github.com/WizerdBaChe/personal-chatgpt-plugin-marketplace",
   "repository": "https://github.com/WizerdBaChe/personal-chatgpt-plugin-marketplace",
+  "license": "MIT",
   "keywords": [
     "productivity",
     "planning",
