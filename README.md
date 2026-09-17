@@ -33,7 +33,7 @@ Those workflows need a separately designed remote MCP app before they can be mad
 
 ## Distribute through a GitHub marketplace
 
-1. Create a private GitHub repository from this directory and push it.
+1. Use a GitHub repository from this directory and push it. Keep it private for workspace-only distribution; this repository is currently public.
 2. In an eligible ChatGPT workspace, have an administrator import the repository as a plugin marketplace from **Workspace settings > Plugins > Marketplaces**.
 3. Install `Personal Skills Core` from the marketplace and test it in a new web chat.
 
