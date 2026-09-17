@@ -69,8 +69,8 @@ parent: "-"
 >   Lam2008's full text and Uddin2006's abstract directly. This profile carries the fuller,
 >   confirmed version; see the Provenance note in §7b. Two further sources (Kim2003, RSC2026) remain
 >   abstract/snippet-only and are flagged inline wherever cited — no numeric claim is drawn from them.
-> - Optional external tool slot: if a local literature corpus or reference-manager MCP is available
->   (a Zotero MCP, `prism`, an Obsidian vault), prefer it for retrieving the full texts flagged
+> - Optional external tool slot: if an enabled literature corpus or reference-manager index is available,
+>   prefer it for retrieving the full texts flagged
 >   `[abstract]` in §7b (notably Kim2003 and Lim2005's full pages 339–344). Absent any such tool this
 >   profile is fully usable from its own tables; §7b states exactly how much of each source was read.
 

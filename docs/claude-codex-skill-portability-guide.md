@@ -57,7 +57,7 @@ Claude Code 與 Codex 都能在某些本機環境操作 shell、檔案與 Git，
 
 ### 4. plugin 是容器；skill 是工作流程
 
-OpenAI 的 plugin 文件明確把 plugin 定義為可組合 skills、MCP 與選用資源的可分發容器；每個 plugin 需要 `.codex-plugin/plugin.json`，而 `skills/`、MCP 設定與 lifecycle hooks 都是容器內的不同部件。[^openai-package]
+OpenAI 的 plugin 文件明確把 plugin 定義為可組合 skills、MCP 與選用資源的可分發容器。新的 portable Agent Plugins package 以 plugin 根目錄的 `plugin.json` 為入口；Codex 可保留 `.codex-plugin/plugin.json` 作為 compatibility fallback，而 `skills/`、MCP 設定與 lifecycle hooks 都是容器內的不同部件。[^openai-package]
 
 這代表下列兩件事必須分開判斷：
 
@@ -172,7 +172,7 @@ integrations/
 ### D. 以目標宿主的規則重建發現與封裝
 
 - **Claude Code target**：依 Claude 的 skill／plugin 來源與專案設定處理；不要帶入 Codex marketplace metadata。
-- **Codex target**：每個 skill 以目標要求的 frontmatter 與目錄驗證；多 skill 套件使用 `.codex-plugin/plugin.json` 與 marketplace layout。
+- **Codex target**：每個 skill 以目標要求的 frontmatter 與目錄驗證；多 skill 套件使用 portable 根目錄 `plugin.json`、保留 `.codex-plugin/plugin.json` 作為相容 fallback，並用 marketplace layout 做發現與安裝。
 - **ChatGPT Web target**：只發布可在 Web 履行的 core；本機依賴改走 remote MCP 或保留給 Codex／Claude 本機版。帳號與 workspace 是否可用 repo marketplace 要另外驗證。
 
 ### E. 驗證要分三種

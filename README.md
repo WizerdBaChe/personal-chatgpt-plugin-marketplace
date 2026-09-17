@@ -23,6 +23,19 @@ For the reusable rule behind that boundary, see [Claude and Codex skill portabil
 
 Every workflow must rely only on conversation context, user-provided files, and enabled connected apps. It must name unavailable evidence rather than implying local access.
 
+## Plugin package layout
+
+The installable plugin lives under `plugins/personal-skills-core/`. It carries the portable Agent Plugins manifest at the plugin root and retains `.codex-plugin/plugin.json` as a Codex compatibility fallback:
+
+```text
+plugins/personal-skills-core/
+├── plugin.json                  # portable ChatGPT/Codex manifest
+├── .codex-plugin/plugin.json    # Codex compatibility fallback
+└── skills/                      # 12 bundled workflows
+```
+
+`.agents/plugins/marketplace.json` is the repository marketplace catalog; it is not part of the plugin payload. The repository marketplace and the universal public Plugins Directory are separate distribution surfaces.
+
 ## Intentionally excluded
 
 The existing local `personal-skill-suite` remains the source for workflows that need local execution or data: Windows cleanup, local asset/vault access, Obsidian access, local CAD, local media tooling, filesystem graph queries, configuration edits, and script-based paper/literature pipelines.
@@ -33,11 +46,13 @@ Those workflows need a separately designed remote MCP app before they can be mad
 
 ## Distribute through a GitHub marketplace
 
-1. Use a GitHub repository from this directory and push it. Keep it private for workspace-only distribution; this repository is currently public.
+1. Use this GitHub repository as a repo marketplace source. Keep it private for workspace-only distribution, or use the current public repository for testing and public-source sharing.
 2. In an eligible ChatGPT workspace, have an administrator import the repository as a plugin marketplace from **Workspace settings > Plugins > Marketplaces**.
 3. Install `Personal Skills Core` from the marketplace and test it in a new web chat.
 
-This is the appropriate distribution route for a workspace-managed plugin catalog and for Codex. After the repository's `main` branch is available, add it to Codex with both the marketplace metadata and plugin payload included in the sparse checkout:
+This route is for a workspace-managed plugin catalog, repo distribution, and Codex. It does not by itself publish the plugin to the universal public Plugins Directory.
+
+After the repository's `main` branch is available, add it to Codex with both the marketplace metadata and plugin payload included in the sparse checkout:
 
 ```powershell
 codex plugin marketplace add WizerdBaChe/personal-chatgpt-plugin-marketplace --ref main --sparse .agents/plugins --sparse plugins
@@ -45,6 +60,12 @@ codex plugin add personal-skills-core@personal-web
 ```
 
 Restart the Codex desktop app after adding or updating the marketplace, then install `Personal Skills Core` from the `Personal Web` source.
+
+## Public ChatGPT and Codex directory
+
+The plugin package is portable and skills-only: it has no bundled MCP server, local executable, hook, or private service dependency. To appear in the universal Plugins Directory shared by ChatGPT and Codex, submit the skills-only package through the OpenAI plugin submission portal. GitHub `main` and the repo marketplace make the source available for testing; they do not complete public review or publication.
+
+Before submission, prepare a verified publisher identity, public listing/support/privacy/terms URLs, starter prompts, and five positive plus three negative test cases. See [OpenAI's plugin submission requirements](https://developers.openai.com/plugins/deploy/submission).
 
 ## Install on an individual ChatGPT Web account
 

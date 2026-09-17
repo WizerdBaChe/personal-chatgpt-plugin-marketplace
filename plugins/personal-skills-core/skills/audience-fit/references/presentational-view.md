@@ -29,11 +29,11 @@ layout per artifact; never transplant it.
   draw the edges that actually exist between them. Two dials, declared
   before drawing (diagram-authoring Step 1 close-line):
   - *Count dial* — the ladder is calibrated from the accepted A1 renders,
-    not borrowed: 「全景」 one page = the standing tier — the four accepted
-    owner views (ccfg / claude-home / mfp-f3 / mfp-f5, 2026-08-30 … 09-05)
+    not borrowed: 「全景」 one page = the standing tier — four accepted
+    owner-view examples (2026-08-30 … 09-05)
     hold 11–24 named nodes, 12–27 connectors, 4–14 edge labels; target
     ≤ 18 nodes / ≤ 24 connectors, hard ceiling 24 / 27 (the largest
-    accepted, mfp-f3, sits there and reads as the limit, not the norm).
+    accepted example sits there and reads as the limit, not the norm).
     「精簡」 inset / slide panel = ≤ 9 nodes [assumed — no accepted
     instance yet; calibrate at the first one]. Over the ceiling → cut in
     the R12 order, never squeeze type (R3) or spacing (R10).

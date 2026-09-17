@@ -72,8 +72,8 @@ parent: "-"
 >   into Node 5, and [Chen1997] promotion into Node 1/6. Two new pitfall rows and three new Node 5 rows
 >   came directly out of that verification — i.e. checking the citations produced content, it did not
 >   just police it.
-> - Optional external tool slot: if a local literature corpus or reference-manager MCP is available
->   (a Zotero MCP, `prism`, an Obsidian vault), prefer it for retrieving the full texts named in §7b.
+> - Optional external tool slot: if an enabled literature corpus or reference-manager index is available,
+>   prefer it for retrieving the full texts named in §7b.
 >   Absent any such tool, this profile is fully usable from its own tables; the §7b access tags state
 >   exactly how much of each source was read.
 

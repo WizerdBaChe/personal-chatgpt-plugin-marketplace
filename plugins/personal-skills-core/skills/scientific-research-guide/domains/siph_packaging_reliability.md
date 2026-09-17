@@ -79,8 +79,8 @@ parent: "-"
 >   optical components*, not fiber/cable components). The mis-mapped designations and the scope error
 >   survive in Node 6 as pitfalls, because they are exactly the errors a reader of the same secondary
 >   literature will make. Do not re-import the original packet's attributions.
-> - Optional external tool slot: if a local literature corpus or reference-manager MCP is available
->   (a Zotero MCP, `prism`, an Obsidian vault), prefer it for retrieving the full texts named in §7b —
+> - Optional external tool slot: if an enabled literature corpus or reference-manager index is available,
+>   prefer it for retrieving the full texts named in §7b —
 >   several entries here are `[abstract]`-tagged only. Absent any such tool this profile is fully
 >   usable from its own tables; §7b states exactly how much of each source was read.
 

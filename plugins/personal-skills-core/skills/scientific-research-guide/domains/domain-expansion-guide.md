@@ -567,7 +567,7 @@ SKILL.md Gate B and for the local-corpus slot in `literature-search-extract`:
    pass). If a path is genuinely needed for a human reader, put it in `STATUS.md` or a
    report file, not in content the AI loads as domain reasoning.
 
-This same slot pattern is how the `prism` MCP hook in SKILL.md and the citation-inbox
+This same slot pattern is how an optional research-index hook in SKILL.md and the citation-inbox
 delegation to `literature-search-extract` (see `references/user-supplied-citations.md`
 §Delegation rule) are already written — a domain profile's terminology-vault hint should
 read the same way, not invent its own convention.
@@ -576,8 +576,8 @@ read the same way, not invent its own convention.
 begins with a leading YAML block (`xi` / `what` / `tags` / `aliases` / `date` / `status` /
 `profile_type` / `parent`). It is DERIVED from the file's `_routing.md` row by
 `tools/profile_frontmatter.py --sync` and checked by `profile-lint.py`'s FM-CLOSURE rule;
-never hand-edit it — change the manifest row and re-sync. It exists so the Obsidian vault
-that mounts `domains/` as a read-only wing shows the row's keywords as properties, and so
+never hand-edit it — change the manifest row and re-sync. It exists so an optional knowledge-vault
+index that mounts `domains/` as a read-only wing shows the row's keywords as properties, and so
 the cross-index union query can reach a profile. It carries no personal path and no
 invented translation (the CJK half of the bilingual card is the fixed tag 領域框架), so it
 survives `skill-share-packaging` unchanged. The `> Profile metadata:` blockquote below
@@ -1062,7 +1062,7 @@ this skill has already paid for twice.
    runs as a `literature-search-extract` Mode 2 run (preset `citation_identity`, one run per
    profile) so the audit trail is an indexed evidence run, not only a report: write
    `run:<run_id>` into the Verification status cell of every row that run touched (§3.7 loop
-   pointer); the human-read report in `the authorized project report folder` stays as the summary.
+   pointer); the human-read report in an external report archive stays as the summary.
 3. **Fill the template** (`_template.md`, or §8's mini-template for a branch): Nodes 1–6 with
    `[Key]` citations and the ledger filled **as you write**, conditions in the same breath as
    every number (§3.2), triggers in their §3.6 homes, trigger conditions in the asker's words.

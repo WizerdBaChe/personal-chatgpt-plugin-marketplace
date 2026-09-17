@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "personal-skills-core",
+  "version": "0.1.0",
+  "description": "Portable workflows for ChatGPT and Codex that use conversation context, user-provided files, and enabled connected apps.",
+  "author": {
+    "name": "WizerdBaChe",
+    "url": "https://github.com/WizerdBaChe"
+  },
+  "homepage": "https://github.com/WizerdBaChe/personal-chatgpt-plugin-marketplace",
+  "repository": "https://github.com/WizerdBaChe/personal-chatgpt-plugin-marketplace",
+  "keywords": [
+    "productivity",
+    "planning",
+    "design",
+    "research",
+    "security",
+    "workflows"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Personal Skills Core",
+        "shortDescription": "Portable workflows for planning, design, research, and review.",
+        "longDescription": "Provides 12 conversation-first workflows for planning, design, research, performance, security, review, and handoff. It does not require a local filesystem, shell, executable, or private local service.",
+        "developerName": "WizerdBaChe",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/WizerdBaChe/personal-chatgpt-plugin-marketplace",
+        "defaultPrompt": [
+          "Choose the most relevant Personal Skills Core workflow for this request.",
+          "Apply a portable workflow using only the context and files I provided.",
+          "State missing evidence and safe fallbacks before proceeding."
+        ]
+      }
+    }
+  }
+}

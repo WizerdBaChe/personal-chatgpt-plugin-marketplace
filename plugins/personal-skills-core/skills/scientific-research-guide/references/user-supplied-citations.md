@@ -236,7 +236,7 @@ skill (Mode 2), do not do it inline from memory or a single unlogged fetch.
   cell keeps the qualitative outcome; the date lives in its own column (triage rule 9). This mirrors
   how `the historical source-environment material-integration report (not included)`
   records the Mode 2 contract used to build this file's first version (the report lives in
-  `the authorized project report folder`, not in this skill's folder — corrected 2026-09-03).
+  an external report archive, not in this skill's folder — corrected 2026-09-03).
 - **Batch integration passes** (adding a whole new domain's citation set at once, as in
   the 2026-08-03 GaN/MicroLED/Bi2Se3 pass) should still run through the same contract per
   track, and should leave a dated audit-trail report in `reports/`, not only a diff to
