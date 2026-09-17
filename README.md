@@ -2,6 +2,8 @@
 
 This repository is the `personal-web` marketplace: the publishable counterpart to the local Codex personal skill suite. It deliberately contains only workflows that can operate in ChatGPT Web without access to a Windows filesystem, shell, locally installed executable, or private local service.
 
+For the reusable rule behind that boundary, see [Claude and Codex skill portability](docs/claude-codex-skill-portability-guide.md).
+
 ## Included plugin
 
 `personal-skills-core` contains 12 portable workflows:
@@ -35,7 +37,14 @@ Those workflows need a separately designed remote MCP app before they can be mad
 2. In an eligible ChatGPT workspace, have an administrator import the repository as a plugin marketplace from **Workspace settings > Plugins > Marketplaces**.
 3. Install `Personal Skills Core` from the marketplace and test it in a new web chat.
 
-This is the appropriate distribution route for a workspace-managed plugin catalog and for Codex. In Codex, add the marketplace with both `.agents/plugins` and `plugins` included in any sparse checkout.
+This is the appropriate distribution route for a workspace-managed plugin catalog and for Codex. After the repository's `main` branch is available, add it to Codex with both the marketplace metadata and plugin payload included in the sparse checkout:
+
+```powershell
+codex plugin marketplace add WizerdBaChe/personal-chatgpt-plugin-marketplace --ref main --sparse .agents/plugins --sparse plugins
+codex plugin add personal-skills-core@personal-web
+```
+
+Restart the Codex desktop app after adding or updating the marketplace, then install `Personal Skills Core` from the `Personal Web` source.
 
 ## Install on an individual ChatGPT Web account
 
